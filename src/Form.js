@@ -14,11 +14,15 @@ export const Form = () => {
     }
 
     const handleClick = () => {
+        if(input.item === ''){
+            alert("Input can't be empty!")
+        }else{
         setTodos([...todos, input]);
         setInput({
             id: '',
             item: ''
-        });
+            });
+        }
     }
 
     const handleDelete = (id) => {
